@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Quiz de História com perguntas, explicações didáticas e resultado final."
+  >
+  <meta name="theme-color" content="#9d78cf">
+
+  <title>Quiz de História</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="page-container">
+    <section class="quiz-card" aria-labelledby="quiz-title">
+      <header class="quiz-header">
+        <div>
+          <p class="eyebrow">Teste seus conhecimentos</p>
+          <h1 id="quiz-title">Quiz de História</h1>
+        </div>
+
+        <div class="score-box" aria-label="Pontuação atual">
+          <span class="score-label">Pontos</span>
+          <strong id="score">0</strong>
+        </div>
+      </header>
+
+      <div class="progress-section">
+        <div class="progress-information">
+          <span id="question-counter">Pergunta 1 de 8</span>
+          <span id="progress-percentage">0%</span>
+        </div>
+
+        <div
+          class="progress-track"
+          role="progressbar"
+          aria-label="Progresso do quiz"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+          id="progress-bar"
+        >
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <section class="question-area" id="question-area">
+        <p class="question-category">História</p>
+        <h2 id="question-text">Carregando pergunta...</h2>
+
+        <div
+          class="options-list"
+          id="options-list"
+          role="group"
+          aria-labelledby="question-text"
+        ></div>
+
+        <div
+          class="explanation-box"
+          id="explanation-box"
+          aria-live="polite"
+          hidden
+        >
+          <div class="explanation-icon" aria-hidden="true">i</div>
+
+          <div>
+            <h3>Entenda a resposta</h3>
+            <p id="explanation-text"></p>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button
+            class="primary-button"
+            id="next-button"
+            type="button"
+            hidden
+          >
+            Próxima pergunta
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="result-area" id="result-area" hidden>
+        <div class="result-icon" aria-hidden="true">✓</div>
+
+        <p class="eyebrow">Quiz concluído</p>
+        <h2>Seu resultado</h2>
+
+        <p class="result-score">
+          Você acertou
+          <strong id="final-score">0</strong>
+          de
+          <strong id="total-questions">8</strong>
+          perguntas.
+        </p>
+
+        <p class="result-message" id="result-message"></p>
+
+        <button class="primary-button" id="restart-button" type="button">
+          Jogar novamente
+          <span aria-hidden="true">↻</span>
+        </button>
+      </section>
+
+      <p class="error-message" id="error-message" role="alert" hidden>
+        Não foi possível carregar as perguntas. Verifique se o arquivo
+        <strong>questions.json</strong> está na mesma pasta do site.
+      </p>
+    </section>
+  </main>
+
+  <dialog class="error-dialog" id="error-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-content">
+      <div class="dialog-icon" aria-hidden="true">×</div>
+
+      <p class="dialog-eyebrow">Resposta incorreta</p>
+      <h2 id="dialog-title">Você errou!</h2>
+
+      <p>
+        Observe a alternativa correta e leia a explicação antes de continuar.
+      </p>
+
+      <button class="dialog-button" id="close-dialog-button" type="button">
+        Ver explicação
+      </button>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
