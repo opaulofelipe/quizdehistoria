@@ -1,5 +1,8 @@
 "use strict";
 
+const STORAGE_KEY = "quiz-historia-progresso-v2";
+const STORAGE_VERSION = 2;
+
 const elements = {
   questionArea: document.querySelector("#question-area"),
   resultArea: document.querySelector("#result-area"),
@@ -23,10 +26,14 @@ const elements = {
 };
 
 const state = {
+  allQuestions: [],
   questions: [],
   currentQuestionIndex: 0,
   score: 0,
-  answered: false
+  answered: false,
+  selectedIndex: null,
+  completed: false,
+  storageEnabled: true
 };
 
 const optionLetters = ["A", "B", "C", "D"];
@@ -47,20 +54,33 @@ async function loadQuestions() {
 
     validateQuestions(questions);
 
-    state.questions = questions;
+    state.allQuestions = questions;
     elements.totalQuestions.textContent = String(questions.length);
 
-    renderQuestion();
+    restoreOrCreateProgress();
+    elements.score.textContent = String(state.score);
+
+    if (state.completed) {
+      showResults();
+    } else {
+      renderQuestion();
+    }
   } catch (error) {
     console.error("Erro ao carregar as perguntas:", error);
-
     elements.questionArea.hidden = true;
     elements.errorMessage.hidden = false;
   }
 }
 
 function validateQuestions(questions) {
+  const ids = new Set();
+
   questions.forEach((question, index) => {
+    const hasValidId =
+      typeof question.id === "string" &&
+      question.id.trim().length > 0 &&
+      !ids.has(question.id);
+
     const hasValidOptions =
       Array.isArray(question.options) &&
       question.options.length === 4 &&
@@ -75,16 +95,143 @@ function validateQuestions(questions) {
       typeof question.question === "string" &&
       typeof question.explanation === "string";
 
-    if (!hasValidOptions || !hasValidAnswer || !hasValidTexts) {
+    if (!hasValidId || !hasValidOptions || !hasValidAnswer || !hasValidTexts) {
       throw new Error(`A pergunta ${index + 1} possui dados inválidos.`);
     }
+
+    ids.add(question.id);
   });
+}
+
+function restoreOrCreateProgress() {
+  const savedProgress = readProgress();
+
+  if (isValidSavedProgress(savedProgress)) {
+    applySavedProgress(savedProgress);
+    return;
+  }
+
+  startNewCycle();
+}
+
+function isValidSavedProgress(progress) {
+  if (!progress || progress.version !== STORAGE_VERSION) {
+    return false;
+  }
+
+  const availableIds = new Set(
+    state.allQuestions.map((question) => question.id)
+  );
+
+  const hasValidOrder =
+    Array.isArray(progress.questionOrder) &&
+    progress.questionOrder.length === state.allQuestions.length &&
+    new Set(progress.questionOrder).size === progress.questionOrder.length &&
+    progress.questionOrder.every((id) => availableIds.has(id));
+
+  const hasValidIndex =
+    Number.isInteger(progress.currentQuestionIndex) &&
+    progress.currentQuestionIndex >= 0 &&
+    progress.currentQuestionIndex < state.allQuestions.length;
+
+  const hasValidScore =
+    Number.isInteger(progress.score) &&
+    progress.score >= 0 &&
+    progress.score <= state.allQuestions.length;
+
+  const hasValidSelectedIndex =
+    progress.selectedIndex === null ||
+    (
+      Number.isInteger(progress.selectedIndex) &&
+      progress.selectedIndex >= 0 &&
+      progress.selectedIndex <= 3
+    );
+
+  return (
+    hasValidOrder &&
+    hasValidIndex &&
+    hasValidScore &&
+    typeof progress.answered === "boolean" &&
+    hasValidSelectedIndex &&
+    typeof progress.completed === "boolean"
+  );
+}
+
+function applySavedProgress(progress) {
+  const questionsById = new Map(
+    state.allQuestions.map((question) => [question.id, question])
+  );
+
+  state.questions = progress.questionOrder.map((id) => questionsById.get(id));
+  state.currentQuestionIndex = progress.currentQuestionIndex;
+  state.score = progress.score;
+  state.answered = progress.answered;
+  state.selectedIndex = progress.selectedIndex;
+  state.completed = progress.completed;
+}
+
+function startNewCycle() {
+  state.questions = shuffleArray([...state.allQuestions]);
+  state.currentQuestionIndex = 0;
+  state.score = 0;
+  state.answered = false;
+  state.selectedIndex = null;
+  state.completed = false;
+
+  saveProgress();
+}
+
+function shuffleArray(items) {
+  for (let index = items.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [items[index], items[randomIndex]] = [items[randomIndex], items[index]];
+  }
+
+  return items;
+}
+
+function readProgress() {
+  try {
+    const storedValue = localStorage.getItem(STORAGE_KEY);
+
+    if (!storedValue) {
+      return null;
+    }
+
+    return JSON.parse(storedValue);
+  } catch (error) {
+    console.warn("Não foi possível ler o progresso salvo:", error);
+    state.storageEnabled = false;
+    return null;
+  }
+}
+
+function saveProgress() {
+  if (!state.storageEnabled || state.questions.length === 0) {
+    return;
+  }
+
+  const progress = {
+    version: STORAGE_VERSION,
+    questionOrder: state.questions.map((question) => question.id),
+    currentQuestionIndex: state.currentQuestionIndex,
+    score: state.score,
+    answered: state.answered,
+    selectedIndex: state.selectedIndex,
+    completed: state.completed,
+    savedAt: new Date().toISOString()
+  };
+
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+  } catch (error) {
+    console.warn("Não foi possível salvar o progresso:", error);
+    state.storageEnabled = false;
+  }
 }
 
 function renderQuestion() {
   const currentQuestion = state.questions[state.currentQuestionIndex];
-
-  state.answered = false;
 
   elements.questionArea.hidden = false;
   elements.resultArea.hidden = true;
@@ -100,6 +247,10 @@ function renderQuestion() {
     const optionButton = createOptionButton(option, index);
     elements.optionsList.append(optionButton);
   });
+
+  if (state.answered && state.selectedIndex !== null) {
+    restoreAnsweredQuestion();
+  }
 }
 
 function createOptionButton(optionText, optionIndex) {
@@ -135,10 +286,38 @@ function selectAnswer(selectedIndex) {
     return;
   }
 
-  state.answered = true;
-
   const currentQuestion = state.questions[state.currentQuestionIndex];
   const isCorrect = selectedIndex === currentQuestion.correctIndex;
+
+  state.answered = true;
+  state.selectedIndex = selectedIndex;
+
+  if (isCorrect) {
+    state.score += 1;
+    elements.score.textContent = String(state.score);
+  }
+
+  paintAnswerState(selectedIndex);
+  showExplanation(currentQuestion.explanation);
+  prepareNextButton();
+  updateProgress();
+  saveProgress();
+
+  if (!isCorrect) {
+    openErrorDialog();
+  }
+}
+
+function restoreAnsweredQuestion() {
+  const currentQuestion = state.questions[state.currentQuestionIndex];
+
+  paintAnswerState(state.selectedIndex);
+  showExplanation(currentQuestion.explanation);
+  prepareNextButton();
+}
+
+function paintAnswerState(selectedIndex) {
+  const currentQuestion = state.questions[state.currentQuestionIndex];
   const optionButtons = [
     ...elements.optionsList.querySelectorAll(".option-button")
   ];
@@ -151,11 +330,14 @@ function selectAnswer(selectedIndex) {
     if (index === currentQuestion.correctIndex) {
       button.classList.add("correct");
       status.textContent = "✓";
-      button.setAttribute("aria-label", `${button.innerText}. Resposta correta.`);
+      button.setAttribute(
+        "aria-label",
+        `${button.innerText}. Resposta correta.`
+      );
       return;
     }
 
-    if (index === selectedIndex && !isCorrect) {
+    if (index === selectedIndex) {
       button.classList.add("incorrect");
       status.textContent = "×";
       button.setAttribute(
@@ -167,16 +349,6 @@ function selectAnswer(selectedIndex) {
 
     button.classList.add("dimmed");
   });
-
-  if (isCorrect) {
-    state.score += 1;
-    elements.score.textContent = String(state.score);
-  } else {
-    openErrorDialog();
-  }
-
-  showExplanation(currentQuestion.explanation);
-  prepareNextButton();
 }
 
 function showExplanation(explanation) {
@@ -205,8 +377,10 @@ function prepareNextButton() {
 function updateProgress() {
   const currentNumber = state.currentQuestionIndex + 1;
   const totalQuestions = state.questions.length;
+  const answeredQuestions =
+    state.currentQuestionIndex + (state.answered ? 1 : 0);
   const progress = Math.round(
-    (state.currentQuestionIndex / totalQuestions) * 100
+    (answeredQuestions / totalQuestions) * 100
   );
 
   elements.questionCounter.textContent =
@@ -226,11 +400,17 @@ function goToNextQuestion() {
     state.currentQuestionIndex === state.questions.length - 1;
 
   if (isLastQuestion) {
+    state.completed = true;
+    saveProgress();
     showResults();
     return;
   }
 
   state.currentQuestionIndex += 1;
+  state.answered = false;
+  state.selectedIndex = null;
+
+  saveProgress();
   renderQuestion();
 
   window.scrollTo({
@@ -246,13 +426,13 @@ function showResults() {
   elements.questionArea.hidden = true;
   elements.resultArea.hidden = false;
   elements.finalScore.textContent = String(state.score);
+  elements.score.textContent = String(state.score);
 
   elements.progressPercentage.textContent = "100%";
   elements.progressFill.style.width = "100%";
   elements.progressBar.setAttribute("aria-valuenow", "100");
 
   elements.resultMessage.textContent = getResultMessage(percentage);
-  elements.restartButton.focus();
 }
 
 function getResultMessage(percentage) {
@@ -265,17 +445,14 @@ function getResultMessage(percentage) {
   }
 
   if (percentage >= 50) {
-    return "Bom começo! Reveja as explicações para fortalecer os pontos que ainda causaram dúvida.";
+    return "Bom resultado! Reveja as explicações para fortalecer os pontos que ainda causaram dúvida.";
   }
 
   return "Continue estudando. Errar também faz parte da aprendizagem, especialmente quando entendemos por que uma resposta está incorreta.";
 }
 
 function restartQuiz() {
-  state.currentQuestionIndex = 0;
-  state.score = 0;
-  state.answered = false;
-
+  startNewCycle();
   elements.score.textContent = "0";
 
   renderQuestion();
@@ -326,7 +503,7 @@ elements.errorDialog.addEventListener("click", (event) => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (elements.errorDialog.open || state.answered) {
+  if (elements.errorDialog.open || state.answered || state.completed) {
     return;
   }
 

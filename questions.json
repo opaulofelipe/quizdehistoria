@@ -1,5 +1,6 @@
 [
   {
+    "id": "hist-001",
     "question": "Ao analisar uma carta escrita por um governante, qual procedimento é mais adequado ao trabalho do historiador?",
     "options": [
       "Aceitar o conteúdo como relato neutro, pois documentos oficiais registram fatos",
@@ -11,6 +12,7 @@
     "explanation": "Uma fonte não fala sozinha. O historiador precisa perguntar quem a produziu, para quem, com qual objetivo e em que circunstâncias. Uma carta oficial pode conter informações valiosas, mas também interesses, silêncios e tentativas de convencer o leitor."
   },
   {
+    "id": "hist-002",
     "question": "Por que a divisão da História em Antiga, Medieval, Moderna e Contemporânea deve ser usada com cautela?",
     "options": [
       "Porque foi criada para estudar exclusivamente sociedades sem escrita",
@@ -22,6 +24,7 @@
     "explanation": "Essa periodização foi construída com marcos da história europeia, como a queda de Roma e a Revolução Francesa. Ela pode ser útil para organização, mas não descreve com a mesma precisão os processos históricos da África, da Ásia ou das Américas."
   },
   {
+    "id": "hist-003",
     "question": "Qual interpretação melhor descreve a chamada Revolução Neolítica?",
     "options": [
       "Foi um processo gradual e diverso de domesticação de plantas e animais em várias regiões",
@@ -33,6 +36,7 @@
     "explanation": "A agricultura e a domesticação não apareceram de uma só vez nem em um único centro. Diferentes populações desenvolveram essas práticas em ritmos próprios, e durante muito tempo combinaram cultivo, criação, caça e coleta."
   },
   {
+    "id": "hist-004",
     "question": "Em um sítio arqueológico, por que a posição de um objeto no solo é tão importante quanto o objeto em si?",
     "options": [
       "Porque a profundidade determina automaticamente quem fabricou o objeto",
@@ -44,6 +48,7 @@
     "explanation": "O contexto arqueológico permite entender como o objeto foi usado e com quais outros vestígios estava associado. Retirar uma peça sem registrar sua posição pode destruir informações sobre sua época, função e relação com o local."
   },
   {
+    "id": "hist-005",
     "question": "O que as evidências atuais indicam sobre a evolução humana?",
     "options": [
       "Uma sequência linear em que cada espécie substituiu imediatamente a anterior",
@@ -55,6 +60,7 @@
     "explanation": "A evolução humana é melhor representada como um arbusto, não como uma escada. Diferentes espécies de hominínios coexistiram, algumas se cruzaram e muitas desapareceram sem se transformar diretamente em outra espécie."
   },
   {
+    "id": "hist-006",
     "question": "Por que a arte rupestre não pode ser interpretada apenas como uma reprodução fiel do cotidiano?",
     "options": [
       "Porque todas as imagens rupestres foram produzidas no mesmo período",
@@ -66,6 +72,7 @@
     "explanation": "Cenas de animais, pessoas e sinais podem ter diferentes sentidos. Algumas talvez se relacionassem à caça, mas outras podem ter expressado crenças, memórias, identidades ou rituais. A interpretação exige contexto arqueológico e comparação cuidadosa."
   },
   {
+    "id": "hist-007",
     "question": "Qual consequência social esteve frequentemente associada ao armazenamento de excedentes agrícolas?",
     "options": [
       "A possibilidade de sustentar especialistas e ampliar diferenças de riqueza e poder",
@@ -77,6 +84,7 @@
     "explanation": "O excedente podia alimentar pessoas que não trabalhavam diretamente na produção, como artesãos, soldados, sacerdotes e administradores. Seu controle também favoreceu hierarquias e disputas por recursos."
   },
   {
+    "id": "hist-008",
     "question": "Por que o domínio da metalurgia não substituiu imediatamente os instrumentos de pedra?",
     "options": [
       "Porque os metais só podiam ser usados em objetos religiosos",
@@ -88,6 +96,7 @@
     "explanation": "Tecnologias antigas não desapareciam automaticamente quando surgia uma novidade. Ferramentas de pedra continuaram úteis, baratas e disponíveis, enquanto metais exigiam matérias-primas, conhecimento técnico e redes de troca."
   },
   {
+    "id": "hist-009",
     "question": "Nas cidades mesopotâmicas, qual relação existia entre irrigação e poder político?",
     "options": [
       "A irrigação eliminou a necessidade de autoridades locais",
@@ -99,6 +108,7 @@
     "explanation": "A agricultura dependia da organização de canais, diques e mão de obra. Instituições capazes de coordenar esses trabalhos, arrecadar recursos e resolver disputas podiam ampliar sua autoridade. Isso não eliminava conflitos pelo uso da água."
   },
   {
+    "id": "hist-010",
     "question": "Qual característica tornou o Império Acádio uma experiência política diferente das antigas cidades-Estado sumérias?",
     "options": [
       "A tentativa de submeter várias cidades e povos a uma autoridade imperial mais ampla",
@@ -110,6 +120,7 @@
     "explanation": "Sob Sargão e seus sucessores, o poder acádio articulou diferentes cidades e regiões sob uma mesma autoridade. Foi uma experiência imperial, embora dependesse de administradores locais, tributos e controle militar."
   },
   {
+    "id": "hist-011",
     "question": "O que o Código de Hamurábi revela sobre a sociedade babilônica?",
     "options": [
       "Que todos recebiam as mesmas punições, independentemente de posição social",
@@ -121,6 +132,7 @@
     "explanation": "O código reunia normas sobre propriedade, família, trabalho, comércio e violência. As penas não eram iguais para todos: a posição social das pessoas envolvidas influenciava o julgamento e a punição."
   },
   {
+    "id": "hist-012",
     "question": "Como os assírios procuravam manter o controle sobre territórios extensos?",
     "options": [
       "Evitando qualquer deslocamento de populações conquistadas",
@@ -132,6 +144,7 @@
     "explanation": "O domínio assírio combinava campanhas militares, cobrança de tributos, governadores, redes de comunicação e deslocamentos forçados de populações. A violência era parte do sistema, mas não era o único instrumento de controle."
   },
   {
+    "id": "hist-013",
     "question": "Qual era a principal função das satrapias no Império Persa Aquemênida?",
     "options": [
       "Organizar províncias administradas por representantes submetidos ao rei",
@@ -143,6 +156,7 @@
     "explanation": "As satrapias eram grandes unidades administrativas dirigidas por sátrapas. Elas facilitavam a arrecadação e o governo do império, enquanto o rei mantinha mecanismos de fiscalização e frequentemente permitia costumes locais."
   },
   {
+    "id": "hist-014",
     "question": "No Egito Antigo, como o conceito de ma'at se relacionava ao poder do faraó?",
     "options": [
       "Justificava a separação total entre religião e governo",
@@ -154,6 +168,7 @@
     "explanation": "Ma'at significava uma ordem justa e equilibrada do mundo. O faraó era apresentado como aquele que deveria mantê-la por meio de rituais, decisões políticas, proteção do território e funcionamento da sociedade."
   },
   {
+    "id": "hist-015",
     "question": "Por que a unificação política do Egito foi favorecida pela geografia do vale do Nilo?",
     "options": [
       "Porque o deserto fornecia água abundante durante todo o ano",
@@ -165,6 +180,7 @@
     "explanation": "O Nilo conectava diferentes regiões e sustentava a agricultura. Essa faixa relativamente estreita de ocupação facilitava transportes, arrecadação e circulação de autoridades, embora a unidade política precisasse ser continuamente mantida."
   },
   {
+    "id": "hist-016",
     "question": "Por que a reforma religiosa de Aquenáton enfrentou resistência?",
     "options": [
       "Porque proibiu qualquer representação do faraó",
@@ -176,6 +192,7 @@
     "explanation": "A promoção de Aton e a redução do prestígio de cultos como o de Amon afetaram sacerdotes, templos e tradições consolidadas. Após a morte de Aquenáton, muitos elementos da antiga ordem religiosa foram restaurados."
   },
   {
+    "id": "hist-017",
     "question": "O que diferenciava as pólis gregas entre si?",
     "options": [
       "Elas compartilhavam língua e cultos, mas possuíam instituições e formas de governo próprias",
@@ -187,6 +204,7 @@
     "explanation": "As pólis faziam parte de um universo cultural grego, mas eram politicamente autônomas. Atenas, Esparta, Corinto e Tebas possuíam instituições, alianças e interesses diferentes."
   },
   {
+    "id": "hist-018",
     "question": "Como a formação da falange hoplítica se relacionou a mudanças políticas em algumas pólis?",
     "options": [
       "Concentrou a defesa exclusivamente em cavaleiros aristocratas",
@@ -198,6 +216,7 @@
     "explanation": "A falange dependia de soldados de infantaria que lutavam em formação. Em algumas pólis, o peso militar desses proprietários médios fortaleceu reivindicações de participação política, embora o processo variasse de cidade para cidade."
   },
   {
+    "id": "hist-019",
     "question": "Qual foi um efeito das reformas de Clístenes em Atenas?",
     "options": [
       "A restauração do poder hereditário dos reis",
@@ -209,6 +228,7 @@
     "explanation": "Clístenes reorganizou a participação política por demos e novas tribos territoriais. Isso enfraqueceu parte do poder das famílias aristocráticas, mas a cidadania continuou restrita a uma parcela masculina e livre da população."
   },
   {
+    "id": "hist-020",
     "question": "Qual fator contribuiu diretamente para o início da Guerra do Peloponeso?",
     "options": [
       "A conquista de Atenas pelo Império Romano",
@@ -220,6 +240,7 @@
     "explanation": "O crescimento do poder ateniense e sua liderança sobre a Liga de Delos alarmaram Esparta e seus aliados. Disputas entre cidades aliadas aprofundaram uma rivalidade que já envolvia interesses políticos, militares e econômicos."
   },
   {
+    "id": "hist-021",
     "question": "O que caracterizou o mundo helenístico após as conquistas de Alexandre?",
     "options": [
       "A formação de reinos que combinaram elementos gregos e tradições locais",
@@ -231,6 +252,7 @@
     "explanation": "Após a morte de Alexandre, seu império foi dividido em reinos. Neles, língua e cultura gregas circularam amplamente, mas se misturaram a práticas egípcias, persas, mesopotâmicas e de outras regiões."
   },
   {
+    "id": "hist-022",
     "question": "Na República Romana, o chamado conflito das ordens envolveu principalmente:",
     "options": [
       "A disputa entre Roma e Cartago pelo Mediterrâneo",
@@ -242,6 +264,7 @@
     "explanation": "Plebeus pressionaram por instituições próprias, leis escritas e maior acesso à vida política. O processo foi longo e produziu conquistas importantes, mas não eliminou desigualdades econômicas e sociais."
   },
   {
+    "id": "hist-023",
     "question": "Qual consequência das Guerras Púnicas contribuiu para tensões sociais em Roma?",
     "options": [
       "O fim das conquistas territoriais romanas",
@@ -253,6 +276,7 @@
     "explanation": "As vitórias ampliaram territórios, riquezas e o número de escravizados. Parte das elites acumulou terras, enquanto pequenos proprietários enfrentaram dificuldades, alimentando conflitos sociais e propostas de reforma."
   },
   {
+    "id": "hist-024",
     "question": "Como Augusto consolidou seu poder sem abolir formalmente todas as instituições republicanas?",
     "options": [
       "Transferiu o comando militar permanente ao Senado",
@@ -264,6 +288,7 @@
     "explanation": "Augusto apresentou seu governo como restauração da República, mas concentrou comando militar, autoridade política e prestígio religioso. Senado e magistraturas continuaram existindo, porém dentro de uma nova relação de poder."
   },
   {
+    "id": "hist-025",
     "question": "Qual interpretação melhor descreve a passagem da Antiguidade para a Idade Média no Ocidente europeu?",
     "options": [
       "Foi um processo de transformações, com rupturas e permanências romanas",
@@ -275,6 +300,7 @@
     "explanation": "A desagregação do Império Romano do Ocidente ocorreu ao longo do tempo. Reinos germânicos incorporaram leis, religião, língua e práticas administrativas romanas, ao mesmo tempo que introduziram novas relações políticas."
   },
   {
+    "id": "hist-026",
     "question": "Por que o termo feudalismo é debatido entre historiadores?",
     "options": [
       "Porque não existiam relações de dependência no mundo medieval",
@@ -286,6 +312,7 @@
     "explanation": "O termo ajuda a organizar temas como senhorio, dependência camponesa e vínculos entre nobres. Porém, essas relações variaram muito conforme lugar e época, por isso o modelo não deve ser tratado como sistema único e uniforme."
   },
   {
+    "id": "hist-027",
     "question": "Qual foi uma característica do governo de Carlos Magno?",
     "options": [
       "A criação de um Estado nacional francês com fronteiras atuais",
@@ -297,6 +324,7 @@
     "explanation": "Carlos Magno expandiu seu domínio, apoiou reformas religiosas e educacionais e governou por meio de representantes locais. Sua coroação imperial reforçou a relação entre poder franco e cristianismo latino."
   },
   {
+    "id": "hist-028",
     "question": "A controvérsia iconoclasta no Império Bizantino dizia respeito principalmente:",
     "options": [
       "À escolha de imperadores por voto popular",
@@ -308,6 +336,7 @@
     "explanation": "Durante a iconoclastia, autoridades imperiais e religiosas discutiram se imagens sagradas deveriam ser veneradas ou destruídas. O conflito envolveu teologia, poder imperial e interesses de grupos religiosos."
   },
   {
+    "id": "hist-029",
     "question": "Como os primeiros califados administraram populações religiosas diversas?",
     "options": [
       "Convertendo imediatamente todos os habitantes ao islamismo",
@@ -319,6 +348,7 @@
     "explanation": "Cristãos, judeus e outros grupos puderam manter práticas religiosas sob determinadas condições e tributos. As políticas variaram conforme dinastia, região e período, e a islamização foi gradual."
   },
   {
+    "id": "hist-030",
     "question": "Qual foi uma consequência duradoura das Cruzadas para o Mediterrâneo?",
     "options": [
       "O encerramento das trocas entre Europa e Oriente",
@@ -330,6 +360,7 @@
     "explanation": "As Cruzadas intensificaram conflitos, mas também estimularam circulação de mercadorias, pessoas e conhecimentos. Cidades mercantis italianas se beneficiaram, enquanto as relações entre cristãos latinos, bizantinos e muçulmanos ficaram ainda mais complexas."
   },
   {
+    "id": "hist-031",
     "question": "O crescimento das cidades europeias a partir do século XI esteve ligado, entre outros fatores, a:",
     "options": [
       "Expansão agrícola, aumento populacional e reativação de rotas comerciais",
@@ -341,6 +372,7 @@
     "explanation": "Melhorias agrícolas e crescimento demográfico favoreceram excedentes e trocas. Feiras, rotas e centros urbanos se ampliaram, atraindo artesãos, comerciantes e migrantes do campo."
   },
   {
+    "id": "hist-032",
     "question": "Qual efeito social da Peste Negra ocorreu em várias regiões da Europa?",
     "options": [
       "Aumento imediato e uniforme da servidão",
@@ -352,6 +384,7 @@
     "explanation": "A elevada mortalidade reduziu a mão de obra disponível. Em alguns lugares, trabalhadores negociaram salários ou mobilidade; em outros, autoridades tentaram congelar salários e reforçar obrigações, gerando conflitos."
   },
   {
+    "id": "hist-033",
     "question": "Como o mecenato contribuiu para a produção artística no Renascimento?",
     "options": [
       "Impedindo artistas de trabalhar para famílias privadas",
@@ -363,6 +396,7 @@
     "explanation": "Famílias, governantes, corporações e instituições religiosas encomendavam obras. Esse apoio permitia a atividade artística, mas também associava arte à demonstração de poder, devoção, riqueza e memória."
   },
   {
+    "id": "hist-034",
     "question": "Qual questão esteve no centro das críticas iniciais de Martinho Lutero?",
     "options": [
       "A existência de universidades na Europa",
@@ -374,6 +408,7 @@
     "explanation": "Lutero criticou a comercialização de indulgências e defendeu que a salvação dependia da fé, não de pagamentos ou obras capazes de comprá-la. O debate rapidamente atingiu a autoridade do papa e a interpretação das Escrituras."
   },
   {
+    "id": "hist-035",
     "question": "O Concílio de Trento, no contexto da Reforma Católica, procurou:",
     "options": [
       "Substituir os sacramentos por práticas exclusivamente individuais",
@@ -385,6 +420,7 @@
     "explanation": "O concílio reafirmou doutrinas contestadas pelos protestantes e promoveu reformas na formação do clero, na disciplina e na organização religiosa. Foi parte de um processo mais amplo de renovação católica."
   },
   {
+    "id": "hist-036",
     "question": "Qual afirmação descreve melhor as monarquias absolutistas europeias?",
     "options": [
       "Os reis governavam sem depender de impostos, nobres ou instituições locais",
@@ -396,6 +432,7 @@
     "explanation": "Mesmo monarcas poderosos precisavam arrecadar, formar exércitos e negociar com nobres, cidades e instituições. O absolutismo não significou poder ilimitado na prática nem organização idêntica em todos os países."
   },
   {
+    "id": "hist-037",
     "question": "No contexto do mercantilismo, por que as monarquias incentivavam companhias comerciais e monopólios?",
     "options": [
       "Para reduzir a presença do Estado na economia colonial",
@@ -407,6 +444,7 @@
     "explanation": "Companhias privilegiadas recebiam direitos exclusivos em certas áreas ou produtos. Em troca, ajudavam na colonização, na guerra, no comércio e na arrecadação, dentro de uma política de competição entre Estados."
   },
   {
+    "id": "hist-038",
     "question": "Qual foi um efeito importante da chamada troca colombiana?",
     "options": [
       "A circulação de plantas, animais, doenças e populações entre continentes",
@@ -418,6 +456,7 @@
     "explanation": "Após 1492, produtos, animais e microrganismos circularam intensamente entre Velho e Novo Mundo. Doenças contribuíram para catástrofes demográficas indígenas, enquanto alimentos americanos transformaram dietas em outras regiões."
   },
   {
+    "id": "hist-039",
     "question": "Por que o tráfico atlântico de africanos escravizados foi central para a economia colonial americana?",
     "options": [
       "Porque africanos chegaram apenas como trabalhadores temporários assalariados",
@@ -429,6 +468,7 @@
     "explanation": "Milhões de pessoas foram sequestradas, vendidas e transportadas à força. Seu trabalho sustentou plantações, minas, cidades e circuitos comerciais. O tráfico envolveu agentes europeus, africanos e americanos, mas dentro de relações profundamente violentas e desiguais."
   },
   {
+    "id": "hist-040",
     "question": "O que caracterizou a Revolução Científica dos séculos XVI e XVII?",
     "options": [
       "A rejeição de observações e experimentos",
@@ -440,6 +480,7 @@
     "explanation": "Astronomia, física e outras áreas passaram por mudanças apoiadas em matemática, observação, experimentação e novos instrumentos. Isso não eliminou conflitos nem rompeu de forma instantânea com tradições religiosas."
   },
   {
+    "id": "hist-041",
     "question": "Qual problema político Montesquieu pretendia enfrentar ao propor a separação dos poderes?",
     "options": [
       "A concentração de funções estatais capaz de favorecer abusos",
@@ -451,6 +492,7 @@
     "explanation": "Montesquieu argumentava que a liberdade política dependia de impedir a concentração excessiva. A distribuição de funções entre poderes deveria criar mecanismos de equilíbrio e contenção."
   },
   {
+    "id": "hist-042",
     "question": "Qual contradição marcou a independência das Treze Colônias?",
     "options": [
       "A defesa de direitos políticos conviveu com a manutenção da escravidão",
@@ -462,6 +504,7 @@
     "explanation": "A linguagem de liberdade e direitos não foi aplicada igualmente. A escravidão permaneceu, povos indígenas sofreram expansão territorial e mulheres continuaram excluídas da cidadania política plena."
   },
   {
+    "id": "hist-043",
     "question": "Qual fator contribuiu para a crise política francesa em 1789?",
     "options": [
       "O equilíbrio fiscal alcançado após a Guerra dos Sete Anos",
@@ -473,6 +516,7 @@
     "explanation": "A monarquia enfrentava dívidas e um sistema fiscal desigual, no qual grupos privilegiados resistiam a novas cobranças. Más colheitas e preços elevados ampliaram a tensão social e política."
   },
   {
+    "id": "hist-044",
     "question": "Por que a Revolução Haitiana teve impacto internacional tão profundo?",
     "options": [
       "Porque restaurou o domínio francês sobre o Caribe",
@@ -484,6 +528,7 @@
     "explanation": "A revolução de Saint-Domingue derrotou forças coloniais e aboliu a escravidão, criando o Haiti. Ela desafiou diretamente o sistema escravista atlântico e provocou medo entre proprietários de escravizados em outras regiões."
   },
   {
+    "id": "hist-045",
     "question": "Qual era um objetivo central do Congresso de Viena após as guerras napoleônicas?",
     "options": [
       "Expandir os princípios republicanos franceses",
@@ -495,6 +540,7 @@
     "explanation": "As potências buscaram reorganizar fronteiras, restaurar dinastias e evitar que um único Estado dominasse a Europa. Também pretendiam dificultar novas revoluções, embora não tenham eliminado o liberalismo e o nacionalismo."
   },
   {
+    "id": "hist-046",
     "question": "Por que a industrialização alterou as relações de trabalho?",
     "options": [
       "Porque impediu o emprego de mulheres e crianças",
@@ -506,6 +552,7 @@
     "explanation": "O sistema fabril reuniu máquinas e trabalhadores sob supervisão, com ritmos e horários mais rígidos. Artesanato e trabalho doméstico continuaram existindo, e mulheres e crianças participaram amplamente da industrialização."
   },
   {
+    "id": "hist-047",
     "question": "O que aproximou muitos movimentos revolucionários de 1848 na Europa?",
     "options": [
       "A defesa comum do retorno ao feudalismo",
@@ -517,6 +564,7 @@
     "explanation": "As revoluções reuniram liberais, nacionalistas, trabalhadores e outros grupos. Eles não defendiam exatamente o mesmo programa, o que ajudou a produzir divisões e derrotas, mas pressionaram por representação, direitos e mudanças sociais."
   },
   {
+    "id": "hist-048",
     "question": "Qual fator foi comum aos processos de unificação da Itália e da Alemanha?",
     "options": [
       "A condução exclusiva por movimentos populares republicanos",
@@ -528,6 +576,7 @@
     "explanation": "Piemonte-Sardenha e Prússia lideraram processos que combinaram diplomacia, guerra e nacionalismo. Movimentos populares tiveram importância, mas a unificação foi conduzida em grande parte por monarquias e elites estatais."
   },
   {
+    "id": "hist-049",
     "question": "Como o imperialismo do século XIX foi frequentemente justificado pelas potências europeias?",
     "options": [
       "Por discursos de missão civilizatória e superioridade racial",
@@ -539,6 +588,7 @@
     "explanation": "Ideias racistas e a noção de missão civilizatória apresentavam a dominação como benéfica. Esses discursos ocultavam violência, exploração econômica, competição estratégica e destruição de autonomias locais."
   },
   {
+    "id": "hist-050",
     "question": "Por que o sistema de alianças agravou a crise de julho de 1914?",
     "options": [
       "Porque obrigava todos os países europeus a permanecer neutros",
@@ -550,6 +600,7 @@
     "explanation": "Após o atentado de Sarajevo, decisões de Áustria-Hungria, Sérvia, Rússia, Alemanha, França e Reino Unido se encadearam. Alianças, planos militares e receios estratégicos ampliaram rapidamente a crise."
   },
   {
+    "id": "hist-051",
     "question": "O que significou a existência de um 'duplo poder' na Rússia após a Revolução de Fevereiro de 1917?",
     "options": [
       "A divisão do território entre Rússia e Alemanha",
@@ -561,6 +612,7 @@
     "explanation": "O Governo Provisório possuía autoridade formal, mas os sovietes exerciam influência real sobre trabalhadores e soldados. Essa coexistência instável abriu espaço para disputas sobre guerra, terra e poder."
   },
   {
+    "id": "hist-052",
     "question": "Qual crítica é frequentemente feita ao Tratado de Versalhes de 1919?",
     "options": [
       "Ele não alterou fronteiras nem criou novos Estados",
@@ -572,6 +624,7 @@
     "explanation": "O tratado responsabilizou a Alemanha, impôs reparações, perdas territoriais e limites militares. Essas medidas alimentaram ressentimentos, embora não expliquem sozinhas a ascensão posterior do nazismo."
   },
   {
+    "id": "hist-053",
     "question": "Por que a crise de 1929 se espalhou para além dos Estados Unidos?",
     "options": [
       "Porque economias estavam conectadas por comércio, crédito e investimentos",
@@ -583,6 +636,7 @@
     "explanation": "A economia internacional dependia de empréstimos, investimentos e mercados ligados aos Estados Unidos. A retração do crédito e do comércio atingiu bancos, indústrias e empregos em várias regiões."
   },
   {
+    "id": "hist-054",
     "question": "Qual elemento diferenciava os regimes fascistas de ditaduras conservadoras tradicionais?",
     "options": [
       "A defesa do pluralismo partidário",
@@ -594,6 +648,7 @@
     "explanation": "Fascismos buscaram mobilizar a população, criar movimentos de massa e reorganizar a sociedade sob um líder e um partido. Usaram propaganda, violência e nacionalismo extremo, além de combater liberalismo, socialismo e democracia."
   },
   {
+    "id": "hist-055",
     "question": "Por que a Batalha de Stalingrado é considerada um ponto de inflexão na Segunda Guerra Mundial?",
     "options": [
       "Porque levou à rendição imediata do Japão",
@@ -605,6 +660,7 @@
     "explanation": "A derrota alemã em Stalingrado, no início de 1943, teve grande impacto militar e simbólico. A partir daí, o Exército Vermelho passou progressivamente à ofensiva no front oriental."
   },
   {
+    "id": "hist-056",
     "question": "Durante a Guerra Fria, o Movimento dos Não Alinhados buscava:",
     "options": [
       "Criar uma aliança militar subordinada aos Estados Unidos",
@@ -616,6 +672,7 @@
     "explanation": "Países da Ásia, África e outras regiões procuraram evitar submissão automática a Washington ou Moscou. O movimento era diverso e seus membros nem sempre foram neutros, mas reivindicavam soberania e espaço próprio."
   },
   {
+    "id": "hist-057",
     "question": "Qual característica marcou a economia açucareira no Brasil colonial?",
     "options": [
       "Integração entre grandes propriedades, trabalho escravizado e comércio atlântico",
@@ -627,6 +684,7 @@
     "explanation": "A produção açucareira articulava terras, engenhos, trabalho escravizado e redes comerciais atlânticas. O sistema envolvia proprietários locais, traficantes, comerciantes e financiadores, inclusive de outras regiões da Europa."
   },
   {
+    "id": "hist-058",
     "question": "Qual interpretação é mais adequada sobre as bandeiras paulistas?",
     "options": [
       "Foram expedições voltadas apenas à exploração de ouro",
@@ -638,6 +696,7 @@
     "explanation": "As bandeiras não tiveram um único objetivo. Muitas capturaram indígenas para escravização; outras procuraram metais, combateram grupos ou prestaram serviços. Sua memória posterior foi frequentemente romantizada."
   },
   {
+    "id": "hist-059",
     "question": "Como a mineração modificou a sociedade colonial no século XVIII?",
     "options": [
       "Eliminou a escravidão nas áreas urbanas",
@@ -649,6 +708,7 @@
     "explanation": "A mineração atraiu população, criou centros urbanos e movimentou abastecimento, tropas, animais e mercadorias. Ao mesmo tempo, a Coroa ampliou impostos e mecanismos de controle sobre o ouro."
   },
   {
+    "id": "hist-060",
     "question": "Qual continuidade marcou a independência política do Brasil em 1822?",
     "options": [
       "A manutenção da monarquia, da escravidão e de grande parte das elites no poder",
@@ -660,6 +720,7 @@
     "explanation": "A separação de Portugal criou um Estado independente, mas preservou estruturas importantes. A monarquia, a escravidão e o poder das elites proprietárias continuaram, embora conflitos políticos e regionais permanecessem."
   },
   {
+    "id": "hist-061",
     "question": "O que explica a diversidade das revoltas do período regencial?",
     "options": [
       "Todas defendiam o retorno imediato de Pedro I",
@@ -671,6 +732,7 @@
     "explanation": "Cabanagem, Balaiada, Sabinada e Farroupilha tiveram bases sociais e objetivos diferentes. Elas refletiam tensões entre centro e províncias, rivalidades locais e insatisfações de grupos populares e elites."
   },
   {
+    "id": "hist-062",
     "question": "Por que a abolição da escravidão em 1888 não garantiu igualdade social aos libertos?",
     "options": [
       "Porque a lei manteve juridicamente a escravidão em algumas províncias",
@@ -682,6 +744,7 @@
     "explanation": "A Lei Áurea acabou com a escravidão legal, mas não distribuiu terras nem criou políticas de integração social. O racismo, a exclusão econômica e as desigualdades construídas ao longo de séculos continuaram."
   },
   {
+    "id": "hist-063",
     "question": "Na Primeira República, o coronelismo estava relacionado principalmente:",
     "options": [
       "Ao controle militar direto do país por oficiais do Exército",
@@ -693,6 +756,7 @@
     "explanation": "Chefes políticos locais, frequentemente grandes proprietários, intermediavam relações entre população e Estado. Podiam controlar votos por dependência, favores e coerção, articulando-se com oligarquias estaduais e governo federal."
   },
   {
+    "id": "hist-064",
     "question": "Qual combinação melhor caracteriza o Estado Novo de Getúlio Vargas?",
     "options": [
       "Centralização autoritária, censura, propaganda e legislação trabalhista",
